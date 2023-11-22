@@ -1,0 +1,23 @@
+<mat-toolbar style="color: rgb(249, 255, 249);background-color:rgb(128, 62, 0)">
+    <a
+      [routerLink]="'/'"
+      mat-icon-button
+      class="example-icon"
+      arial-label="Example icon-button with menu icon"
+    >
+      <mat-icon></mat-icon>
+    </a>
+    <span>Colegio de ingenieros del PERU</span>
+    <span class="example-spacer"></span>
+    <a
+      *ngIf = "!isLoggedIn"
+      [routerLink]="'/signup'"
+      mat-icon-button
+      class="example-icon favorite-icon mr20 ml70"
+      aria-label="Example icon-button with heart icon"
+    >
+      Registrar
+    </a>
+   
+  </mat-toolbar>
+  
