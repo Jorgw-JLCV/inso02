@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -32,6 +31,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ModificarComponent } from './pages/modificar/modificar.component';
 import { PagoComponent } from './pages/pago/pago.component';
 
+import { MatDialogModule } from '@angular/material/dialog'; // Asegúrate de importar esto
+
+import { AppComponent} from './app.component';
+import { ModalComponent } from './pages/modal/modal.component';
 
 
 @NgModule({
@@ -44,7 +47,8 @@ import { PagoComponent } from './pages/pago/pago.component';
     DashboardComponent,
     UserDashboardComponent,
     ModificarComponent,
-    PagoComponent
+    PagoComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +66,8 @@ import { PagoComponent } from './pages/pago/pago.component';
     FlexLayoutModule,
     MatSidenavModule,
     MatListModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
     
   ],
   providers: [authInterceptorProviders],
