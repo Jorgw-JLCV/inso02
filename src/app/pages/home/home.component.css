@@ -9,12 +9,13 @@ body, h1, button {
     justify-content: space-around;
     align-items: center;
     height: calc(100vh - 60px); /* Ajusta la altura según la altura del encabezado */
-    padding: 350px;
+    padding: 50px; /* Reduce el padding para subir el componente */
 }
 
 .logo-container {
     max-width: 200px; /* Ajusta el tamaño máximo de la imagen */
     margin-right: 10px; /* Ajusta el margen derecho para acercar la imagen a los botones */
+    margin-bottom: 0; /* Elimina el margen inferior para acercar el contenedor al componente de botones */
 }
 
 .logo-container img {

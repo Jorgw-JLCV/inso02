@@ -28,6 +28,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { ModificarComponent } from './pages/modificar/modificar.component';
+
 
 
 @NgModule({
@@ -38,7 +41,8 @@ import { MatListModule } from '@angular/material/list';
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    ModificarComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,8 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     FlexLayoutModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    ReactiveFormsModule
     
   ],
   providers: [authInterceptorProviders],

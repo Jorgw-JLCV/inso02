@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Registrar de Solicitud</h2>
+    <div class="date-container">
+      <span class="current-date">Fecha: 22/11/2023 <span id="displayDate"></span></span>
+    </div>
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <!-- Asigna el valor "Ernesto" y deshabilita la edición -->
+      <input type="text" id="nombre" name="nombre" required [value]="'Ernesto'" disabled>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <!-- Deshabilita la edición del apellido -->
+      <input type="text" id="apellido" name="apellido" required [value]="'Castro Lozano'" disabled>
+    </div>
+    <div class="form-group">
+      <label for="dni">DNI:</label>
+      <!-- Deshabilita la edición del DNI y asigna un valor ficticio -->
+      <input type="number" id="dni" name="dni" required [value]="'76754567'" disabled>
+    </div>
+    <div class="form-group">
+      <label for="archivo">Subir Archivo:</label>
+      <!-- Agrega el atributo 'disabled' para deshabilitar la subida de archivos -->
+      <input type="file" id="archivo" name="archivo" accept=".pdf, .doc, .docx" >
+    </div>
+  
+    <div class="form-group">
+      <!-- Quita el atributo 'routerLink' para evitar la navegación -->
+      <button type="submit" class="btn-register" routerLink="/">Registrar</button>
+      <button type="reset" class="btn-clear">Limpiar</button>
+    </div>
+  </div>
+  

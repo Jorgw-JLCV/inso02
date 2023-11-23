@@ -1,53 +1,28 @@
 
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { UserService } from './../../service/user.service';
-import { Component, OnInit } from '@angular/core';
-import  Swal  from 'sweetalert2';
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent implements OnInit {
+export class SignupComponent{
+  form = new FormGroup({
+    nombre: new FormControl('', Validators.required),
+    apellido: new FormControl('', Validators.required),
+    dni: new FormControl('', Validators.required),
+    archivo: new FormControl('', Validators.required),
+  });
 
-  public user = {
-    username : '',
-    nombre: '',
-    dni:'',
-    telefono : '',
-    correo : '',
-    password: '',
-    edad : '',
-  }
+  onSubmit() {
+    if (this.form.valid) {
+      console.log('Formulario válido');
+      // Aquí puedes manejar el envío de tu formulario
+    } else {
+      console.log('Formulario inválido');
+    }
+  }
 
-  constructor(private userService:UserService,private snack:MatSnackBar) { }
-
-  ngOnInit(): void {
-  }
-
-  formSubmit(){
-    console.log(this.user);
-    if(this.user.username == '' || this.user.username == null){
-      this.snack.open('El nombre de usuario es requerido !!','Aceptar',{
-        duration : 3000,
-        verticalPosition : 'top',
-        horizontalPosition : 'right'
-      });
-      return;
-    }
-    this.userService.añadirUsuario(this.user).subscribe(
-      (data) => {
-        console.log(data);
-        Swal.fire('Usuario guardado','Usuario registrado con exito en el sistema','success');
-      },(error) => {
-        console.log(error);
-        this.snack.open('Ha ocurrido un error en el sistema !!','Aceptar',{
-          duration : 3000
-        });
-      }
-    )
-  }
-
-  
 }
