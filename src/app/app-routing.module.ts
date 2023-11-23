@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { ModificarComponent } from './pages/modificar/modificar.component';
+import { PagoComponent } from './pages/pago/pago.component';
 
 const routes: Routes = [
 
@@ -15,12 +16,12 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
-    path:'signup',
+    path:'solicitud',
     component:SignupComponent,
     pathMatch:'full'
   },
   {
-    path:'login',
+    path:'consulta',
     component:LoginComponent,
     pathMatch:'full'
   },
@@ -30,8 +31,8 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
-    path:'user',
-    component:UserDashboardComponent,
+    path:'pago',
+    component:PagoComponent,
     pathMatch:'full'
   }
 

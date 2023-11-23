@@ -24,5 +24,8 @@ export class SignupComponent{
       console.log('Formulario inválido');
     }
   }
+limpiarCampos() {
+  this.form.reset(); // Limpia todos los campos del formulario
+}
 
 }

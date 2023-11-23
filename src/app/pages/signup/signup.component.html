@@ -13,7 +13,7 @@
   </div>
   <div class="form-group">
     <label for="dni">DNI:</label>
-    <input type="text" id="dni" name="dni" formControlName="dni" required>
+    <input type="text" id="dni" name="dni" formControlName="dni" required maxlength="8">
   </div>
   <div class="form-group">
     <label for="archivo">Subir Archivo:</label>
@@ -22,6 +22,7 @@
 
   <div class="form-group">
     <button type="submit" class="btn-register" routerLink="/">Registrar</button>
-    <button type="reset" class="btn-clear">Limpiar</button>
+    <button type="reset" class="btn-clear" (click)="limpiarCampos()">Limpiar</button>
+
   </div>
 </div>

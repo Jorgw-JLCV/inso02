@@ -30,6 +30,7 @@ import { MatListModule } from '@angular/material/list';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModificarComponent } from './pages/modificar/modificar.component';
+import { PagoComponent } from './pages/pago/pago.component';
 
 
 
@@ -42,7 +43,8 @@ import { ModificarComponent } from './pages/modificar/modificar.component';
     HomeComponent,
     DashboardComponent,
     UserDashboardComponent,
-    ModificarComponent
+    ModificarComponent,
+    PagoComponent
   ],
   imports: [
     BrowserModule,
